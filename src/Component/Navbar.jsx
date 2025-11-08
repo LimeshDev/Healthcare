@@ -1,55 +1,65 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const handleNavClick = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsOpen(false); // close menu on mobile
+    }
+
+    // Search button triggers all nav items
+    const handleSearchClick = (e) => {
+        e.preventDefault();
+        const ids = ['home', 'about', 'department', 'contact'];
+        ids.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) section.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     return (
         <>
-            <nav class="navbar bg  navbar-expand-lg bg-body-tertiary ">
-                <div class="container-fluid ">
-                    <a class="navbar-brand fs-2 fw-bold" href="#">MADCARE</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar bg navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid">
+                    <a className="navbar-brand fs-2 fw-bold" href="#">MADCARE</a>
+
+                    {/* Hamburger / X toggler */}
+                    <button className="navbar-toggler" type="button" onClick={toggleMenu}>
+                        {isOpen ? '✕' : <span className="navbar-toggler-icon"></span>}
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent ">
-                        <ul class="navbar-nav me-auto mb-2 ms-auto gap-5  mb-lg-0">
-                            <li class="nav-item  ">
-                                <Link   to="">Home</Link>
+
+                    <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 ms-auto gap-5 mb-lg-0">
+                            <li className="nav-item">
+                                <Link to="" onClick={() => handleNavClick('home')}>Home</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to="About">About</Link>
-
+                            <li className="nav-item">
+                                <Link to="About" onClick={() => handleNavClick('about')}>About</Link>
                             </li>
-                          
-                           
-                            <li class="nav-item">
-                                <Link to="Department">Department</Link>
-
+                            <li className="nav-item">
+                                <Link to="Department" onClick={() => handleNavClick('department')}>Department</Link>
                             </li>
-
-
-                            <li class="nav-item">
-                                <Link to="Contact">Contact</Link>
-
+                            <li className="nav-item">
+                                <Link to="Contact" onClick={() => handleNavClick('contact')}>Contact</Link>
                             </li>
-
-
-
-                           
-                            
-
-
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+
+                        {/* Search button */}
+                        <form className="d-flex" role="search" onSubmit={handleSearchClick}>
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
             </nav>
-            <ul>
-
-            </ul>
         </>
-    )
+    );
 }

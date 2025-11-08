@@ -2,20 +2,102 @@
   background-color: #f4f9ff;
   border-radius: 10px;
   padding: 50px 30px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-section h2 {
   color: black;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 .about-section button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background-color: #004aad;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.About{
-    text-align: center;
+
+.about-section button:hover {
+  background-color: #003080;
 }
-.About:hover{
-    text-decoration: underline;
-    
+
+.About {
+  text-align: center;
+  cursor: pointer;
+}
+
+.About:hover {
+  text-decoration: underline;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 40px 25px;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+  }
+
+  .about-section button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 35px 20px;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+
+  .about-section button {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 15px;
+  }
+
+  .about-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-section p {
+    font-size: 0.85rem;
+  }
+
+  .about-section button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }

@@ -1,7 +1,59 @@
-import React from 'react'
+import React from "react";
+import "./Footer.css"; // CSS file for footer styling
 
 export default function Footer() {
-    return ( <>
-        <div class="container"> <footer class="py-5"> <div class="row"> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-6 col-md-2 mb-3"> <h5>Section</h5> <ul class="nav flex-column"> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li> <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li> </ul> </div> <div class="col-md-5 offset-md-1 mb-3"> <form> <h5>Subscribe to our newsletter</h5> <p>Monthly digest of what's new and exciting from us.</p> <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1" class="visually-hidden">Email address</label> <input id="newsletter1" type="email" class="form-control" placeholder="Email address"/> <button class="btn btn-primary" type="button">Subscribe</button> </div> </form> </div> </div> <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> <p>© 2025 Company, Inc. All rights reserved.</p> <ul class="list-unstyled d-flex"> <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li> <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24" aria-hidden="true"><use xlink:href="#facebook"></use></svg></a></li> </ul> </div> </footer> </div></>
-    )
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-sections">
+          <div className="footer-section">
+            <h5>Healthcare Services</h5>
+            <ul>
+              <li><a href="#">Doctors</a></li>
+              <li><a href="#">Clinics</a></li>
+              <li><a href="#">Appointments</a></li>
+              <li><a href="#">Emergency</a></li>
+              <li><a href="#">Pharmacy</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h5>About Us</h5>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h5>Support</h5>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Insurance</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div className="footer-section newsletter">
+            <h5>Subscribe to Health Tips</h5>
+            <p>Get monthly tips on wellness, health updates & more.</p>
+            <div className="newsletter-form">
+              <input type="email" placeholder="Email address" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© 2025 HealthCare, Inc. All rights reserved.</p>
+          <div className="social-icons">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
