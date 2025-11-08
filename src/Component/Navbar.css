@@ -1,0 +1,85 @@
+.navbar-nav{
+    margin:2px;
+    list-style: none;
+    padding-left: 20px;
+    
+    
+}
+
+/* Remove list bullets and padding */
+.navbar-nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Remove underline from links */
+.navbar-nav .nav-item a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000; /* optional: set text color */
+  font-weight: 500;
+}
+
+/* Optional: Add hover effect */
+.navbar-nav .nav-item a:hover {
+  color: black; /* Bootstrap primary blue */
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+/* Main navbar background */
+.navbar {
+  background-color: #000 !important; /* black background */
+  padding: 15px 30px;
+}
+
+/* Brand text */
+.navbar-brand {
+  color: #fff !important;
+}
+
+/* Nav links */
+.navbar-nav .nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-nav .nav-item a:hover {
+  color: #00d1b2; /* teal highlight */
+}
+
+/* Toggler icon (mobile menu button) */
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Makes toggler icon white */
+}
+
+/* Search input and button */
+.form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.btn-outline-success {
+  color: #fff;
+  border-color: #00d1b2;
+}
+
+.btn-outline-success:hover {
+  background-color: #00d1b2;
+  color: #000;
+}
+

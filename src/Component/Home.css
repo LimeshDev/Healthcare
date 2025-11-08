@@ -1,0 +1,78 @@
+.hospital-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background: linear-gradient(to right, #e8f0fe, #f4fafe); /* Light gradient */
+  min-height: 100vh;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: #004aad;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #004aad;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #003080;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #004aad;
+  border: 2px solid #004aad;
+}
+
+.btn-secondary:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

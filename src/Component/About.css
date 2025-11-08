@@ -1,0 +1,21 @@
+.about-section {
+  background-color: #f4f9ff;
+  border-radius: 10px;
+  padding: 50px 30px;
+}
+
+.about-section h2 {
+  color: black;
+}
+
+.about-section button {
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.About{
+    text-align: center;
+}
+.About:hover{
+    text-decoration: underline;
+    
+}

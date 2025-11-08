@@ -1,0 +1,28 @@
+.department-section {
+  background-color: #2a4c8b;
+  height: 600px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.service-card h5 {
+  color: #2a4c8b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
